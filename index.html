@@ -38,9 +38,22 @@
         padding: 20px;
         font-size: 16px;
     }
+    heading {
+        font-weight: bold;
+        font-size: 17px;
+    }
     #footer {
         margin-top: 50px;
         font-size: 14px;
+    }
+    .card {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .date {
+        float: right;
+        color: gray;
+        font-style: italic;
     }
 </style>
 <body>
@@ -54,7 +67,36 @@
     </div>
     <h3>About Me</h3>
     <div>
-        Hello. My name is Thomas Huang. I am currently a junior studying Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/">EECS department, University of Michigan</a>.
+        Hello. My name is Thomas Huang. I am currently a third-year undergraduate student studying Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/">EECS department @ University of Michigan</a>.
+    </div>
+
+    <h3>Projects</h3>
+    <div class="card">
+        <heading>ICLR 2018 Reproducibility Challenge</heading>
+        <div>
+            Final Project for EECS 498: Reinforcement Learning <span class="date">Sep - Dec, 2018</span>
+        </div>
+        <br>
+        <div>
+            For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features">here</a>.
+        </div>
+    </div>
+
+    <h3>Teaching</h3>
+    <div class="card">
+        <heading>EECS 445: Introduction to Machine Learning</heading>
+        <div>
+            Instructional Aide for Winter 2018 <span class="date">Jan - Apr, 2018</span>
+        </div>
+        <br>
+        <div>
+            I taught fundamental machine learning concepts, including linear classifiers, support vector machines, decision trees, bagging and boosting, neural networks, deep learning, clustering, collaborative filtering, and graphical models.
+        </div>
+    </div>
+
+    <h3>Readings</h3>
+    <div>
+        I am keeping a list of papers that I read for research/projects, which can be found <a href="https://github.com/thomasehuang/ML-Paper-Notes">here</a>.
     </div>
     <div id="footer">
         <i>Website best viewed on a computer.</i>
