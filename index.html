@@ -31,138 +31,257 @@
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
     -->
+    <style type="text/css">
+        body {
+            font-family: Arial, Verdana, Helvetica;
+            padding: 20px;
+            font-size: 16px;
+        }
+        heading {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        button {
+            font-family: Arial, Verdana, Helvetica;
+            font-size: 18px;
+            margin: 2px 2px 0px 2px;
+            padding: 5px 10px 5px 10px;
+            background-color: lightgray;
+            outline: none;
+            cursor:pointer;
+        }
+        #footer {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+        .norm {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        .card {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-shadow: 0px 0px 5px #000;
+        }
+        .date {
+            float: right;
+            color: gray;
+            font-style: italic;
+        }
+        .pressed {
+            background-color: gray;
+        }
+    </style>
+    <script>
+        var exp_down = false
+        var tae_down = false
+        var proj_down = false
+        var read_down = false
+
+        function dispButton(button) {
+            document.getElementById("res_exp").style.display = "none"
+            document.getElementById("prof_exp").style.display = "none"
+            document.getElementById("proj").style.display = "none"
+            document.getElementById("teach").style.display = "none"
+            document.getElementById("ed").style.display = "none"
+            document.getElementById("read").style.display = "none"
+            if (button === "exp") {
+                exp_down = !exp_down
+                tae_down = false
+                proj_down = false
+                read_down = false
+                if (!exp_down) {
+                    showAll()
+                    document.getElementById("exp_but").classList.remove("pressed")
+                } else {
+                    document.getElementById("res_exp").style.display = "block"
+                    document.getElementById("prof_exp").style.display = "block"
+                    removeButton()
+                    document.getElementById("exp_but").classList.add("pressed")
+                }
+            } else if (button === "tae") {
+                tae_down = !tae_down
+                exp_down = false
+                proj_down = false
+                read_down = false
+                if (!tae_down) {
+                    showAll()
+                    document.getElementById("tae_but").classList.remove("pressed")
+                } else {
+                    document.getElementById("teach").style.display = "block"
+                    document.getElementById("ed").style.display = "block"
+                    removeButton()
+                    document.getElementById("tae_but").classList.add("pressed")
+                }
+            } else if (button === "proj") {
+                proj_down = !proj_down
+                exp_down = false
+                tae_down = false
+                read_down = false
+                if (!proj_down) {
+                    showAll()
+                    document.getElementById("proj_but").classList.remove("pressed")
+                } else {
+                    document.getElementById("proj").style.display = "block"
+                    removeButton()
+                    document.getElementById("proj_but").classList.add("pressed")
+                }
+            } else if (button === "misc") {
+                read_down = !read_down
+                exp_down = false
+                tae_down = false
+                proj_down = false
+                if (!read_down) {
+                    showAll()
+                    document.getElementById("misc_but").classList.remove("pressed")
+                } else {
+                    document.getElementById("read").style.display = "block"
+                    removeButton()
+                    document.getElementById("misc_but").classList.add("pressed")
+                }
+            }
+        }
+
+        function showAll() {
+            document.getElementById("res_exp").style.display = "block"
+            document.getElementById("prof_exp").style.display = "block"
+            document.getElementById("proj").style.display = "block"
+            document.getElementById("teach").style.display = "block"
+            document.getElementById("ed").style.display = "block"
+            document.getElementById("read").style.display = "block"
+        }
+
+        function removeButton() {
+            document.getElementById("exp_but").classList.remove("pressed")
+            document.getElementById("tae_but").classList.remove("pressed")
+            document.getElementById("proj_but").classList.remove("pressed")
+            document.getElementById("misc_but").classList.remove("pressed")
+        }
+    </script>
 </head>
-<style type="text/css">
-    body {
-        font-family: Arial, Verdana, Helvetica;
-        padding: 20px;
-        font-size: 16px;
-    }
-    heading {
-        font-weight: bold;
-        font-size: 18px;
-    }
-    #footer {
-        margin-top: 50px;
-        font-size: 14px;
-    }
-    .norm {
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
-    }
-    .card {
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        padding: 10px;
-        box-shadow: 0px 0px 5px #000;
-    }
-    .date {
-        float: right;
-        color: gray;
-        font-style: italic;
-    }
-</style>
 <body>
     <h2>Thomas Huang</h2>
-    <h3>Contact Info and Links</h3>
+    <!-- <h3>Contact Info and Links</h3> -->
     <div>
         Email: thomaseh [at] umich [dot] edu <br>
         [<a href="https://www.linkedin.com/in/thomaseh/" target="_blank">LinkedIn</a>]
         [<a href="https://github.com/thomasehuang" target="_blank">GitHub</a>]
         [<a href="static/resume.pdf" target="_blank">resume</a>]
     </div>
-    <hr>
+    <!-- <hr> -->
 
-    <h3>About Me</h3>
-    <div class="norm">
-        Hello. My name is Thomas Huang. I am currently a third-year undergraduate student studying Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/">EECS department @ University of Michigan</a>.
+    <div id='about'>
+        <h3>About Me</h3>
+        <div class="norm">
+            Hello! My name is Thomas Huang. I am currently a third-year undergraduate student studying Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/">EECS department @ University of Michigan</a>.
+        </div>
+        <hr>
     </div>
-    <hr>
 
-    <h3>Research Experience</h3>
-    <div class="card">
-        <heading>Professor Honglak Lee's Lab</heading> – University of Michigan
-        <div>
-            Research Assistant <span class="date">April, 2018 – current</span>
-        </div>
-        <br>
-        <div>
-            I am researching the use of deep learning for perception and reasoning. Work done under <a href="http://web.eecs.umich.edu/~honglak/">Professor Honglak Lee</a>. Work partially done under the <a href="https://sure.engin.umich.edu/">SURE program</a>.
-        </div>
+    <div>
+        <button id="exp_but" onclick="dispButton('exp');">Experience</button>
+        <button id="tae_but" onclick="dispButton('tae');">Teaching & Education</button>
+        <button id="proj_but" onclick="dispButton('proj');">Projects</button>
+        <button id="misc_but" onclick="dispButton('misc');">Misc</button>
     </div>
-    <div class="card">
-        <heading>ARM Lab</heading> – University of Michigan
-        <div>
-            Research Assistant <span class="date">Jan – April, 2018</span>
-        </div>
-        <br>
-        <div>
-            I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics. Work done under <a href="http://web.eecs.umich.edu/~dmitryb/">Professor Dmitry Berenson</a>.
-        </div>
-    </div>
-    <hr>
 
-    <h3>Professional Experience</h3>
-    <div class="card">
-        <heading>Salesforce</heading> – San Francisco, California
-        <div>
-            Frontier Scale Software Engineering Intern <span class="date">May – August, 2017</span>
+    <div id='res_exp'>
+        <h3>Research Experience</h3>
+        <div class="card">
+            <heading>Professor Honglak Lee's Lab</heading> – University of Michigan
+            <div>
+                Research Assistant <span class="date">April, 2018 – current</span>
+            </div>
+            <br>
+            <div>
+                I am researching the use of deep learning for perception and reasoning. Work done under <a href="http://web.eecs.umich.edu/~honglak/">Professor Honglak Lee</a>. Work partially done under the <a href="https://sure.engin.umich.edu/">SURE program</a>.
+            </div>
         </div>
-        <br>
-        <div>
-            I worked with a team to pioneer the integration of a third-party software with Salesforce’s Platform using Python and Javascript. I presented the product to C-level executives of a corporate client.
+        <div class="card">
+            <heading>ARM Lab</heading> – University of Michigan
+            <div>
+                Research Assistant <span class="date">Jan – April, 2018</span>
+            </div>
+            <br>
+            <div>
+                I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics. Work done under <a href="http://web.eecs.umich.edu/~dmitryb/">Professor Dmitry Berenson</a>.
+            </div>
         </div>
+        <hr>
     </div>
-    <hr>
 
-    <h3>Projects</h3>
-    <div class="card">
-        <heading>ICLR 2018 Reproducibility Challenge</heading>
-        <div>
-            Final Project for EECS 498: Reinforcement Learning at the University of Michigan <span class="date">Sep – Dec, 2018</span>
+    <div id='prof_exp'>
+        <h3>Professional Experience</h3>
+        <div class="card">
+            <heading>Salesforce</heading> – San Francisco, California
+            <div>
+                Frontier Scale Software Engineering Intern <span class="date">May – August, 2017</span>
+            </div>
+            <br>
+            <div>
+                I worked with a team to pioneer the integration of a third-party software with Salesforce’s Platform using Python and Javascript. I presented the product to C-level executives of a corporate client.
+            </div>
         </div>
-        <br>
-        <div>
-            For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features">here</a>.
-        </div>
+        <hr>
     </div>
-    <hr>
 
-    <h3>Teaching</h3>
-    <div class="card">
-        <heading>EECS 445: Introduction to Machine Learning</heading> – University of Michigan
-        <div>
-            Instructional Aide for Winter 2018 <span class="date">Jan – Apr, 2018</span>
+    <div id='proj'>
+        <h3>Projects</h3>
+        <div class="card">
+            <heading>ICLR 2018 Reproducibility Challenge</heading>
+            <div>
+                Final Project for EECS 498: Reinforcement Learning at the University of Michigan <span class="date">Sep – Dec, 2018</span>
+            </div>
+            <br>
+            <div>
+                For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features">here</a>.
+            </div>
         </div>
-        <br>
-        <div>
-            I taught fundamental machine learning concepts, including linear classifiers, support vector machines, decision trees, bagging and boosting, neural networks, deep learning, clustering, collaborative filtering, and graphical models.
-        </div>
+        <hr>
     </div>
-    <hr>
 
-    <h3>Education</h3>
-    <div class="card">
-        <heading>University of Michigan</heading> – Ann Arbor, Michigan
-        <div>
-            Computer Science, Bachelor of Engineering <span class="date">Sep, 2015 – Present</span>
+    <div id='teach'>
+        <h3>Teaching</h3>
+        <div class="card">
+            <heading>EECS 445: Introduction to Machine Learning</heading> – University of Michigan
+            <div>
+                Instructional Aide for Winter 2018 <span class="date">Jan – Apr, 2018</span>
+            </div>
+            <br>
+            <div>
+                I taught fundamental machine learning concepts, including linear classifiers, support vector machines, decision trees, bagging and boosting, neural networks, deep learning, clustering, collaborative filtering, and graphical models.
+            </div>
         </div>
-        <br>
-        <div>
-            Cumulative GPA: 3.98, Major GPA: 4.0 <br>
-            Relevant coursework: Machine Learning, Reinforcement Learning, Computer Vision, Artificial Intelligence, Web Systems, Operating Systems.<br><br>
-            Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php">James B. Angell Scholar</a> ('18)
-        </div>
+        <hr>
     </div>
-    <hr>
 
-    <h3>Readings</h3>
-    <div class="norm">
-        I am keeping a list of papers that I read for research/projects, which can be found <a href="https://github.com/thomasehuang/ML-Paper-Notes">here</a>.
+    <div id='ed'>
+        <h3>Education</h3>
+        <div class="card">
+            <heading>University of Michigan</heading> – Ann Arbor, Michigan
+            <div>
+                Computer Science, Bachelor of Engineering <span class="date">Sep, 2015 – Present</span>
+            </div>
+            <br>
+            <div>
+                Cumulative GPA: 3.98, Major GPA: 4.0 <br>
+                Relevant coursework: Machine Learning, Reinforcement Learning, Computer Vision, Artificial Intelligence, Web Systems, Operating Systems.<br><br>
+                Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php">James B. Angell Scholar</a> ('18)
+            </div>
+        </div>
+        <hr>
     </div>
-    <hr>
+
+    <div id='read'>
+        <h3>Readings</h3>
+        <div class="norm">
+            I am keeping a list of papers that I read for research/projects, which can be found <a href="https://github.com/thomasehuang/ML-Paper-Notes">here</a>.
+        </div>
+        <hr>
+    </div>
     
     <div id="footer">
         <i>Website best viewed on a computer.</i>
