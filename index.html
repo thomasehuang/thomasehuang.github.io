@@ -31,136 +31,8 @@
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
     MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
     -->
-    <style type="text/css">
-        body {
-            font-family: Arial, Verdana, Helvetica;
-            padding: 20px;
-            font-size: 16px;
-        }
-        heading {
-            font-weight: bold;
-            font-size: 18px;
-        }
-        button {
-            font-family: Arial, Verdana, Helvetica;
-            font-size: 18px;
-            margin: 2px 2px 0px 2px;
-            padding: 5px 10px 5px 10px;
-            background-color: lightgray;
-            outline: none;
-            cursor:pointer;
-        }
-        #footer {
-            margin-top: 50px;
-            font-size: 14px;
-        }
-        .norm {
-            margin-left: 15px;
-            margin-right: 15px;
-            margin-bottom: 15px;
-        }
-        .card {
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            padding: 10px;
-            box-shadow: 0px 0px 5px #000;
-        }
-        .date {
-            float: right;
-            color: gray;
-            font-style: italic;
-        }
-        .pressed {
-            background-color: gray;
-        }
-    </style>
-    <script>
-        var exp_down = false
-        var tae_down = false
-        var proj_down = false
-        var read_down = false
-
-        function dispButton(button) {
-            document.getElementById("res_exp").style.display = "none"
-            document.getElementById("prof_exp").style.display = "none"
-            document.getElementById("proj").style.display = "none"
-            document.getElementById("teach").style.display = "none"
-            document.getElementById("ed").style.display = "none"
-            document.getElementById("read").style.display = "none"
-            if (button === "exp") {
-                exp_down = !exp_down
-                tae_down = false
-                proj_down = false
-                read_down = false
-                if (!exp_down) {
-                    showAll()
-                    document.getElementById("exp_but").classList.remove("pressed")
-                } else {
-                    document.getElementById("res_exp").style.display = "block"
-                    document.getElementById("prof_exp").style.display = "block"
-                    removeButton()
-                    document.getElementById("exp_but").classList.add("pressed")
-                }
-            } else if (button === "tae") {
-                tae_down = !tae_down
-                exp_down = false
-                proj_down = false
-                read_down = false
-                if (!tae_down) {
-                    showAll()
-                    document.getElementById("tae_but").classList.remove("pressed")
-                } else {
-                    document.getElementById("teach").style.display = "block"
-                    document.getElementById("ed").style.display = "block"
-                    removeButton()
-                    document.getElementById("tae_but").classList.add("pressed")
-                }
-            } else if (button === "proj") {
-                proj_down = !proj_down
-                exp_down = false
-                tae_down = false
-                read_down = false
-                if (!proj_down) {
-                    showAll()
-                    document.getElementById("proj_but").classList.remove("pressed")
-                } else {
-                    document.getElementById("proj").style.display = "block"
-                    removeButton()
-                    document.getElementById("proj_but").classList.add("pressed")
-                }
-            } else if (button === "misc") {
-                read_down = !read_down
-                exp_down = false
-                tae_down = false
-                proj_down = false
-                if (!read_down) {
-                    showAll()
-                    document.getElementById("misc_but").classList.remove("pressed")
-                } else {
-                    document.getElementById("read").style.display = "block"
-                    removeButton()
-                    document.getElementById("misc_but").classList.add("pressed")
-                }
-            }
-        }
-
-        function showAll() {
-            document.getElementById("res_exp").style.display = "block"
-            document.getElementById("prof_exp").style.display = "block"
-            document.getElementById("proj").style.display = "block"
-            document.getElementById("teach").style.display = "block"
-            document.getElementById("ed").style.display = "block"
-            document.getElementById("read").style.display = "block"
-        }
-
-        function removeButton() {
-            document.getElementById("exp_but").classList.remove("pressed")
-            document.getElementById("tae_but").classList.remove("pressed")
-            document.getElementById("proj_but").classList.remove("pressed")
-            document.getElementById("misc_but").classList.remove("pressed")
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
     <h2>Thomas Huang</h2>
@@ -176,9 +48,12 @@
     <div id='about'>
         <h3>About Me</h3>
         <div class="norm">
-            Hello! My name is Thomas Huang. I am currently a third-year undergraduate student studying Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/">EECS department @ University of Michigan</a>.
+            Hello! My name is Thomas Huang. I am currently a third-year undergraduate student studying Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/" target="_blank">EECS department @ University of Michigan</a>. 
+            <br>
+            <br>
+            I am planning on pursuing a PhD degree in Machine Learning/Artificial Intelligence after obtaining my undergraduate degree. My research interests are deep learning and its applications to various fields.
         </div>
-        <hr>
+       <hr>
     </div>
 
     <div>
@@ -197,7 +72,7 @@
             </div>
             <br>
             <div>
-                I am researching the use of deep learning for perception and reasoning. Work done under <a href="http://web.eecs.umich.edu/~honglak/">Professor Honglak Lee</a>. Work partially done under the <a href="https://sure.engin.umich.edu/">SURE program</a>.
+                I am researching the use of deep learning for perception and reasoning. Work done under <a href="http://web.eecs.umich.edu/~honglak/" target="_blank">Professor Honglak Lee</a>. Work partially done under the <a href="https://sure.engin.umich.edu/" target="_blank">SURE program</a>.
             </div>
         </div>
         <div class="card">
@@ -207,10 +82,10 @@
             </div>
             <br>
             <div>
-                I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics. Work done under <a href="http://web.eecs.umich.edu/~dmitryb/">Professor Dmitry Berenson</a>.
+                I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics. Work done under <a href="http://web.eecs.umich.edu/~dmitryb/" target="_blank">Professor Dmitry Berenson</a>.
             </div>
         </div>
-        <hr>
+        <!-- <hr> -->
     </div>
 
     <div id='prof_exp'>
@@ -225,7 +100,7 @@
                 I worked with a team to pioneer the integration of a third-party software with Salesforce’s Platform using Python and Javascript. I presented the product to C-level executives of a corporate client.
             </div>
         </div>
-        <hr>
+        <!-- <hr> -->
     </div>
 
     <div id='proj'>
@@ -237,7 +112,7 @@
             </div>
             <br>
             <div>
-                For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features">here</a>.
+                For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html" target="_blank">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features" target="_blank">here</a>.
             </div>
         </div>
         <div class="card">
@@ -247,10 +122,10 @@
             </div>
             <br>
             <div>
-                My team created a system to be incorporated into dash cameras to automatically detect cars suddenly breaking/slowing down in front. For the detection of cars, we used the <a href="https://arxiv.org/abs/1512.02325">Single Shot MultiBox Detector</a> (SSD) with pre-trained weights on the VOC2007 dataset. For detecting break lights, we used a sequence of HSL thresholding, morphological closure, and blob detection. A combination of both detections are used to determine whether the cars in front are suddenly breaking/slowing down. The results of our system can be found <a href="https://youtu.be/kxjSe9UHx4Q" target="_blank">here</a> and <a href="https://youtu.be/7a4Xlpptc1A" target="_blank">here</a>. The color of the bounding box indicate the detection result. The final report can be found <a href="static/442_report.pdf" target="_blank">here</a>.
+                My team created a system to be incorporated into dash cameras to automatically detect cars suddenly breaking/slowing down in front. For the detection of cars, we used the <a href="https://arxiv.org/abs/1512.02325" target="_blank">Single Shot MultiBox Detector</a> (SSD) with pre-trained weights on the VOC2007 dataset. For detecting break lights, we used a sequence of HSL thresholding, morphological closure, and blob detection. A combination of both detections are used to determine whether the cars in front are suddenly breaking/slowing down. The results of our system can be found <a href="https://youtu.be/kxjSe9UHx4Q" target="_blank">here</a> and <a href="https://youtu.be/7a4Xlpptc1A" target="_blank">here</a>. The color of the bounding box indicate the detection result. The final report can be found <a href="static/442_report.pdf" target="_blank">here</a>.
             </div>
         </div>
-        <hr>
+        <!-- <hr> -->
     </div>
 
     <div id='teach'>
@@ -265,7 +140,7 @@
                 I taught fundamental machine learning concepts, including linear classifiers, support vector machines, decision trees, bagging and boosting, neural networks, deep learning, clustering, collaborative filtering, and graphical models.
             </div>
         </div>
-        <hr>
+        <!-- <hr> -->
     </div>
 
     <div id='ed'>
@@ -279,10 +154,25 @@
             <div>
                 Cumulative GPA: 3.98, Major GPA: 4.0 <br>
                 Relevant coursework: Machine Learning, Reinforcement Learning, Computer Vision, Artificial Intelligence, Web Systems, Operating Systems.<br><br>
-                Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php">James B. Angell Scholar</a> ('18)
+                Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/" target="_blank">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">James B. Angell Scholar</a> ('18)
             </div>
         </div>
-        <hr>
+        <!-- <hr> -->
+    </div>
+
+    <div id='xtra'>
+        <h3>Extracurriculars</h3>
+        <div class="card">
+            <heading>UM::Autonomy</heading> – University of Michigan
+            <div>
+                Lead for the AI subteam (2016 – 2018) <span class="date">Sep, 2015 – Current</span>
+            </div>
+            <br>
+            <div>
+                Our team designs and builds an autonomous, robotic boat every year to compete in the <a href="https://www.auvsifoundation.org/competition/roboboat">International RoboBoat Competition</a>, which is composed of several challenges. Our team also composes a research journal paper/technical design report each year, which can be found here (<a href="static/uma_2016.pdf" target="_blank">2016</a>, <a href="static/uma_2017.pdf" target="_blank">2017</a>). For two years, I was the lead of the AI subteam, which is in charge of the software and algorithms used by the boat. I supervised various tasks, such as data collection, object detection, and control systems.
+            </div>
+        </div>
+        <!-- <hr> -->
     </div>
 
     <div id='read'>
@@ -290,9 +180,11 @@
         <div class="norm">
             I am keeping a list of papers that I read for research/projects, which can be found <a href="https://github.com/thomasehuang/ML-Paper-Notes">here</a>.
         </div>
-        <hr>
+        <!-- <hr> -->
     </div>
-    
+
+    <hr>
+
     <div id="footer">
         <i>Website best viewed on a computer.</i>
     </div>
