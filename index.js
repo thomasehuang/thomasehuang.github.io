@@ -12,6 +12,7 @@ function dispButton(button) {
     document.getElementById("teach").style.display = "none"
     document.getElementById("ed").style.display = "none"
     document.getElementById("xtra").style.display = "none"
+    document.getElementById("conf").style.display = "none"
     document.getElementById("read").style.display = "none"
     if (button === "exp") {
         exp_down = !exp_down
@@ -82,6 +83,7 @@ function dispButton(button) {
             document.getElementById("misc_but").classList.remove("pressed")
         } else {
             document.getElementById("xtra").style.display = "block"
+            document.getElementById("conf").style.display = "block"
             document.getElementById("read").style.display = "block"
             removeButton()
             document.getElementById("misc_but").classList.add("pressed")
@@ -97,6 +99,7 @@ function showAll() {
     document.getElementById("teach").style.display = "block"
     document.getElementById("ed").style.display = "block"
     document.getElementById("xtra").style.display = "block"
+    document.getElementById("conf").style.display = "block"
     document.getElementById("read").style.display = "block"
 }
 
