@@ -1,524 +1,253 @@
-<!DOCTYPE HTML>
 <html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Thomas Huang</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<head>
+    <title>Thomas Huang</title>
+    <!--
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMM             MMMMMMMMMMMMMMMMM             MMMMMMMMM
+    MMMMMMMM              MMMMMMMMMMMMMMM              MMMMMMMMM
+    MMMMMMMM                MMMMMMMMMMM                MMMMMMMMM
+    MMMMMMMM                 MMMMMMMMM                 MMMMMMMMM
+    MMMMMMMM                  MMMMMMM                  MMMMMMMMM
+    MMMMMMMMMMMM               MMMMM                MMMMMMMMMMMM
+    MMMMMMMMMMMM                MMM                 MMMMMMMMMMMM
+    MMMMMMMMMMMM                 V                  MMMMMMMMMMMM
+    MMMMMMMMMMMM                                    MMMMMMMMMMMM
+    MMMMMMMMMMMM         ^               ^          MMMMMMMMMMMM
+    MMMMMMMMMMMM         MM             MM          MMMMMMMMMMMM
+    MMMMMMMMMMMM         MMMM         MMMM          MMMMMMMMMMMM
+    MMMMMMMMMMMM         MMMMM       MMMMM          MMMMMMMMMMMM
+    MMMMMMMMMMMM         MMMMMM     MMMMMM          MMMMMMMMMMMM
+    MMMMMMMM                MMMM   MMMM                MMMMMMMMM
+    MMMMMMMM                MMMMMVMMMMM                MMMMMMMMM
+    MMMMMMMM                MMMMMMMMMMM                MMMMMMMMM
+    MMMMMMMM                MMMMMMMMMMM                MMMMMMMMM
+    MMMMMMMM                MMMMMMMMMMM                MMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+    -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- <h2>Contact Info and Links</h2> -->
+    <div>
+        <div id="pic_div">
+            <img src="static/me.png" alt="Me" id="pic">
+            <i id="pic_desc">@Tokyo, Japan</i>
+        </div>
+        <div id="info">
+            <h1>Thomas Huang</h1>
+            Email: thomaseh [at] umich [dot] edu <br>
+            [<a href="https://www.linkedin.com/in/thomaseh/" target="_blank">LinkedIn</a>]
+            [<a href="https://github.com/thomasehuang" target="_blank">GitHub</a>]
+            [<a href="static/resume.pdf" target="_blank">CV</a>]
+            [<a href="https://scholar.google.com/citations?user=7wuq-7AAAAAJ&hl=en" target="_blank">Google Scholar</a>]
+        </div>
+    </div>
+    <!-- <hr> -->
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    <div id="about">
+        <h2 id="title">About Me</h2>
+        <div class="norm">
+            Hello! My name is <strong>Thomas Huang</strong>. I recently graduated from the <a href="https://umich.edu/" target="_blank">University of Michigan</a> and obtained degrees in Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/" target="_blank">EECS department</a>.
+            <br>
+            <br>
+            Starting this fall, I will be joining Professor <a href="http://web.eecs.umich.edu/~honglak/" target="_blank">Honglak Lee</a>'s lab as a PhD student. My research interests are deep learning and its application to computer vision.
+        </div>
+       <hr>
+    </div>
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    <div>
+        <button id="pub_but" onclick="dispButton('pub');">Publications</button>
+        <button id="exp_but" onclick="dispButton('exp');">Experience</button>
+        <button id="tae_but" onclick="dispButton('tae');">Teaching & Education</button>
+        <button id="proj_but" onclick="dispButton('proj');">Projects</button>
+        <button id="award_but" onclick="dispButton('award');">Awards</button>
+        <button id="misc_but" onclick="dispButton('misc');">Misc</button>
+    </div>
 
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+    <div id='pub'>
+        <h2 id="title">Publications</h2>
+        <div class="card">
+            <heading>Learning Hierarchical Semantic Image Manipulation through Structured Representations</heading>
+            <div>
+                Seunghoon Hong, Xinchen Yan, <b>Thomas Huang</b>, Honglak Lee
+            </div>
+            <div>
+                To appear in <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, Montreal, Canada, 2018
+            </div>
+            <div>
+                [<a href="https://arxiv.org/abs/1808.07535" target="_blank">arxiv</a>] [<a href="https://github.com/xcyan/neurips18_hierchical_image_manipulation" target="_blank">code</a>]
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <div id='res_exp'>
+        <h2 id="title">Research Experience</h2>
+        <div class="card">
+            <heading>AI Lab</heading> – University of Michigan
+            <div>
+                Research Assistant <span class="date">April, 2018 – current</span>
+            </div>
+            <br>
+            <div>
+                I am researching the application of deep learning to generation tasks, including image and music generation. Work done under <a href="http://web.eecs.umich.edu/~honglak/" target="_blank">Professor Honglak Lee</a>. Work partially done under the <a href="https://sure.engin.umich.edu/" target="_blank">SURE program</a>.
+            </div>
+        </div>
+        <div class="card">
+            <heading>ARM Lab</heading> – University of Michigan
+            <div>
+                Research Assistant <span class="date">Jan – April, 2018</span>
+            </div>
+            <br>
+            <div>
+                I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics. Work done under <a href="http://web.eecs.umich.edu/~dmitryb/" target="_blank">Professor Dmitry Berenson</a> at the <a href="http://arm.eecs.umich.edu/" target="_blank">Autonomous Robotic Manipulation</a> (ARM) Lab.
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-	</head>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/me_lowres.png);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Thomas Huang</a></h1>
-				<span class="position">
-					ML/DL Researcher
-					<br>
-					Prospective Ph.D. Student
-					<br><br>
-					Email: thomaseh [at] umich [dot] edu
-					<br>
-					[<a href="https://www.linkedin.com/in/thomaseh/" target="_blank">LinkedIn</a>]
-		            [<a href="https://github.com/thomasehuang" target="_blank">GitHub</a>]
-		            [<a href="static/cv.pdf" target="_blank">CV</a>]<br>
-		            [<a href="https://scholar.google.com/citations?user=7wuq-7AAAAAJ&hl=en" target="_blank">Google Scholar</a>]
-				</span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<!-- <li><a href="#" data-nav-section="home">Home</a></li> -->
-						<li class="active"><a href="#" data-nav-section="about">About</a></li>
-						<!-- <li><a href="#" data-nav-section="services">Services</a></li> -->
-						<!-- <li><a href="#" data-nav-section="skills">Skills</a></li> -->
-						<li><a href="#" data-nav-section="publications">Publications</a></li>
-						<li><a href="#" data-nav-section="awards">Honors and Awards</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<li><a href="#" data-nav-section="teaching">Teaching</a></li>
-						<li><a href="#" data-nav-section="projects">Projects</a></li>
-						<!-- <li><a href="#" data-nav-section="work">Work</a></li> -->
-						<!-- <li><a href="#" data-nav-section="blog">Blog</a></li> -->
-						<!-- <li><a href="#" data-nav-section="contact">Contact</a></li> -->
-					</ul>
-				</div>
-			</nav>
+    <div id='teach'>
+        <h2 id="title">Teaching</h2>
+        <div class="card">
+            <heading>EECS 445: Introduction to Machine Learning</heading> – University of Michigan
+            <div>
+                Instructional Aide for Winter and Fall 2018 (2 semesters) <span class="date">Jan – Apr, 2018; Sep – Present</span>
+            </div>
+            <br>
+            <div>
+                I taught fundamental machine learning concepts, including linear classifiers, support vector machines, decision trees, bagging and boosting, neural networks, deep learning, clustering, collaborative filtering, and graphical models.
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-			<div class="colorlib-footer">
-				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span></small></p>
-				<!-- <ul>
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-				</ul> -->
-			</div>
+    <div id='ed'>
+        <h2 id="title">Education</h2>
+        <div class="card">
+            <heading>University of Michigan</heading> – Ann Arbor, Michigan
+            <div>
+                Computer Science, Bachelor of Engineering <span class="date">Sep, 2015 – Present</span>
+            </div>
+            <br>
+            <div>
+                Cumulative GPA: 3.99, Major GPA: 4.0 <br>
+                Relevant coursework: Machine Learning, Reinforcement Learning, Computer Vision, Artificial Intelligence, Natural Language Processing, Data Mining, Algorithmic Robotics, Web Systems, Operating Systems.<br><br>
+                Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/" target="_blank">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">James B. Angell Scholar</a> ('18)
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-		</aside>
+    <div id='award'>
+        <h2 id="title">Honors and Awards</h2>
+        <div class="card">
+            <div>
+                <ul id='award_list'>
+                    <li><strong>NSF Graduate Research Fellowship Honorable Mention</strong>, 2018</li>
+                </ul>
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-		<div id="colorlib-main">
+    <!-- Below are not shown by default -->
 
-			<section class="colorlib-about" data-section="about">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About Me</span>
-										<p>Hello! My name is <strong>Thomas Huang</strong>. I recently graduated from the <a href="https://umich.edu/" target="_blank">University of Michigan</a> and obtained degrees in Computer Science and Data Science at the <a href="https://www.eecs.umich.edu/" target="_blank">EECS department</a>.
+    <div id='proj'>
+        <h2 id="title">Projects</h2>
+        <div class="card">
+            <heading>ICLR 2018 Reproducibility Challenge</heading>
+            <div>
+                Final Project for EECS 498: Reinforcement Learning at the University of Michigan <span class="date">Sep – Dec, 2017</span>
+            </div>
+            <br>
+            <div>
+                For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html" target="_blank">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features" target="_blank">here</a>.
+            </div>
+        </div>
+        <div class="card">
+            <heading>Front-end Collision Prevention System</heading>
+            <div>
+                Final Project for EECS 442: Computer Vision at the University of Michigan <span class="date">Sep – Dec, 2017</span>
+            </div>
+            <br>
+            <div>
+                My team created a system to be incorporated into dash cameras to automatically detect cars suddenly breaking/slowing down in front. For the detection of cars, we used the <a href="https://arxiv.org/abs/1512.02325" target="_blank">Single Shot MultiBox Detector</a> (SSD) with pre-trained weights on the VOC2007 dataset. For detecting break lights, we used a sequence of HSL thresholding, morphological closure, and blob detection. A combination of both detections are used to determine whether the cars in front are suddenly breaking/slowing down. The results of our system can be found <a href="https://youtu.be/kxjSe9UHx4Q" target="_blank">here</a> and <a href="https://youtu.be/7a4Xlpptc1A" target="_blank">here</a>. The color of the bounding box indicate the detection result. The final report can be found <a href="static/442_report.pdf" target="_blank">here</a>.
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-										<p>Starting this fall, I will be joining Professor <a href="http://web.eecs.umich.edu/~honglak/" target="_blank">Honglak Lee</a>'s lab as a PhD student. My research interests are deep learning and its applications to various fields, specifically computer vision, generative models, natural language processing, and reinforcement learning.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <div id='prof_exp'>
+        <h2 id="title">Professional Experience</h2>
+        <div class="card">
+            <heading>Salesforce</heading> – San Francisco, California
+            <div>
+                Frontier Scale Software Engineering Intern <span class="date">May – August, 2017</span>
+            </div>
+            <br>
+            <div>
+                I worked with a team to pioneer the integration of a third-party software with Salesforce’s Platform using Python and Javascript. I presented the product to C-level executives of a corporate client.
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-			<section class="colorlib-publications" data-section="publications">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Publications</span>
-							<h2 class="colorlib-heading animate-box">Publications</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapsePubOne" aria-expanded="true" aria-controls="collapsePubOne">
-									            	Learning Hierarchical Semantic Image Manipulation through Structured Representations
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapsePubOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									         <div class="panel-body">
-									            <div class="row">
-										      		<div class="col-md-12">
-										      			<p>
-										      				Seunghoon Hong, Xinchen Yan, <strong>Thomas Huang</strong>, Honglak Lee
-										      				<br>
-											            	Advances in Neural Information Processing Systems (<a href="https://nips.cc/" target="_blank">NeurIPS</a>), Montreal, Canada, 2018
-											            	<br>
-											            	[<a href="https://arxiv.org/abs/1808.07535" target="_blank">arxiv</a>][code]
-											            </p>
-											            <p>
-											            	<img src="images/neurips2018_figure1.png" style="width: 100%;"></img>
-											            </p>
-										      		</div>
-										      	</div>
-									         </div>
-									    </div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <div id='xtra'>
+        <h2 id="title">Extracurriculars</h2>
+        <div class="card">
+            <heading>UM::Autonomy</heading> – University of Michigan
+            <div>
+                Lead for the AI subteam (2016 – 2018) <span class="date">Sep, 2015 – Current</span>
+            </div>
+            <br>
+            <div>
+                Our team designs and builds an autonomous, robotic boat every year to compete in the <a href="https://www.auvsifoundation.org/competition/roboboat">International RoboBoat Competition</a>, which is composed of several challenges. Our team also composes a research journal paper/technical design report each year, which can be found here (<a href="static/uma_2016.pdf" target="_blank">2016</a>, <a href="static/uma_2017.pdf" target="_blank">2017</a>). For two years, I was the lead of the AI subteam, which is in charge of the software and algorithms used by the boat. I supervised various tasks, such as data collection, object detection, and control systems.
+            </div>
+        </div>
+        <div class="card">
+            <heading>Eta Kappa Nu, EECS Honor Society</heading> – University of Michigan
+            <div>
+                Member <span class="date">Sep, 2016 – Current</span>
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-			<section class="colorlib-awards" data-section="awards">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="awards-desc">
-										<span class="heading-meta">Honors and Awards</span>
-										<h2 class="colorlib-heading animate-box">Honors and Awards</h2>
-										<ul>
-									        <li><b>NSF Graduate Research Fellowship Honorable Mention</b>, 2018</li>
-									    </ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <div id='conf'>
+        <h2 id="title">Conferences</h2>
+        <div class="card">
+            <heading>NeurIPS 2018</heading> – Montreal, Canada
+            <div>
+                Poster Session<span class="date">Dec 3, 2018 – Dec 8, 2018</span>
+            </div>
+            <br>
+            <div>
+                I presented our paper, <i>Learning Hierarchical Semantic Image Manipulation through Structured Representations</i>, at the poster session (<a href="neurips2018.html">pictures</a>).
+            </div>
+        </div>
+        <!-- <hr> -->
+    </div>
 
-			<section class="colorlib-education" data-section="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-									            	University of Michigan, Ann Arbor
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									         <div class="panel-body">
-									            <div class="row">
-										      		<div class="col-md-12">
-										      			<p>
-										      				Computer Science and Data Science, Bachelor of Science in Engineering
-										      				<br>
-										      				Sep. 2015 – May 2019
-										      			</p>
-											            <p>
-											            	Graduated with highest distinction (Summa Cum Laude)<br>
-											            	Cumulative GPA: 3.99, Major GPA: 4.0<br>
-											                Relevant coursework: Machine Learning, Deep Learning, Reinforcement Learning, Computer Vision, Artificial Intelligence (A+), Natural Language Processing (A+), Data Mining (A+), Algorithmic Robotics, Web Systems (A+), Operating Systems.<br><br>
-											                Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/" target="_blank">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">James B. Angell Scholar</a> ('18, '19)
-											            </p>
-										      		</div>
-										      	</div>
-									         </div>
-									    </div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <div id='read'>
+        <h2 id="title">Readings</h2>
+        <div class="norm">
+            I am keeping a list of papers that I read for research/projects, which can be found <a href="https://github.com/thomasehuang/ML-Paper-Notes">here</a>.
+        </div>
+        <!-- <hr> -->
+    </div>
 
-			<section class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">Research Experience</h2>
-						</div>
-					</div>
-					<div class="row" style="margin-bottom: 4em;">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
+    <hr>
 
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2>
-					                  	<a href="http://ai.eecs.umich.edu/" target="_blank">AI Lab, University of Michigan</a>
-					                  	<br>
-					                  	<span>Undergraduate Research Assistant</span>
-					                  	<br>
-					                  	<span>Advisor: <a href="http://web.eecs.umich.edu/~honglak/" target="_blank">Prof. Honglak Lee</a></span>
-					                  	<br>
-					                  	<span>Apr. 2018 - Current</span>
-					                  </h2>
-					                  <p>I am researching the application of deep learning to generation tasks, including image and music generation.</p>
-					               </div>
-					            </div>
-					         </article>
-
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2>
-					               		<a href="http://arm.eecs.umich.edu/" target="_blank">ARM Lab, University of Michigan</a>
-					               		<br>
-					                  	<span>Undergraduate Research Assistant</span>
-					                  	<br>
-					                  	<span>Advisor: <a href="http://web.eecs.umich.edu/~dmitryb/" target="_blank">Prof. Dmitry Berenson</a></span>
-					               		<br><span>Jan. 2018 - Apr. 2018</span>
-					               	</h2>
-					                  <p>I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics.</p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2>
-					               		<a href="http://www.malab.se.ritsumei.ac.jp/top/index_e.php" target="_blank">BioInMech Lab, Ritsumeikan University, Japan</a>
-					               		<br>
-					                  	<span>Research Intern</span>
-					                  	<br>
-					                  	<span>Advisor: <a href="http://www.ritsumei.ac.jp/~shugen/" target="_blank">Prof. Shugen Ma</a></span>
-					               		<br><span>Apr. 2016 - Sep. 2016</span>
-					               	</h2>
-					                  <p>I developed a framework for communication between Mathematica and hardware interfaces for robots to be used by other researchers, with a focus on extensibility and ease of integration.</p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2>
-					               		<a href="https://wumrc.engin.umich.edu/" target="_blank">S. M. Wu Manufacturing Research Center, University of Michigan</a>
-					               		<br>
-					                  	<span>Undergraduate Research Assistant</span>
-					                  	<br>
-					                  	<span>Advisor: <a href="https://www.northeastern.edu/jin/" target="_blank">Prof. Xiaoning Jin</a></span>
-					               		<br><span>Sep. 2015 - Apr. 2016</span>
-					               	</h2>
-					                  <p>I researched the use of sound sensors to detect leakage in pipes. I utilized LabVIEW to collect experimental data and analyzed the data using analytical tools in MATLAB.</p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				   <div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<h2 class="colorlib-heading animate-box">Work Experience</h2>
-						</div>
-					</div>
-				   	<div class="row">
-				   		<div class="col-md-12">
-				         <div class="timeline-centered">
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-
-					               <div class="timeline-icon color-2">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2>
-					                  	<a href="http://ai.eecs.umich.edu/" target="_blank">Salesforce, San Francisco</a>
-					                  	<br>
-					                  	<span>Software Engineering Intern</span>
-					                  	<br>
-					                  	<span>May. 2017 - Aug. 2017</span>
-					                  </h2>
-					                  <p>I pioneered the integration of a popular social media software (WeChat) with Salesforce’s platform using Python and Javascript to satisfy customer needs.</p>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   	</div>
-				</div>
-			</section>
-
-			<section class="colorlib-experience" data-section="teaching">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Teaching</span>
-							<h2 class="colorlib-heading animate-box">Teaching</h2>
-						</div>
-					</div>
-				   	<div class="row">
-				   		<div class="col-md-12">
-				         <div class="timeline-centered">
-				         	<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2>
-					                  	EECS 445: Introduction to Machine Learning
-					                  	<br>
-					                  	<span>Head Instructional Aide</span>
-					                  	<br>
-					                  	<span>Jan. 2019 - May. 2019</span>
-					                  </h2>
-					               </div>
-					            </div>
-					         </article>
-
-				         	<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2>
-					                  	EECS 445: Introduction to Machine Learning
-					                  	<br>
-					                  	<span>Instructional Aide</span>
-					                  	<br>
-					                  	<span>Sep. 2018 - Dec. 2018</span>
-					                  </h2>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
-
-					               <div class="timeline-label">
-					                  <h2>
-					                  	EECS 445: Introduction to Machine Learning
-					                  	<br>
-					                  	<span>Instructional Aide</span>
-					                  	<br>
-					                  	<span>Jan. 2018 - Apr. 2018</span>
-					                  </h2>
-					               </div>
-					            </div>
-					         </article>
-
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   	</div>
-				</div>
-			</section>
-
-			<section class="colorlib-project" data-section="projects">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="project-desc">
-										<span class="heading-meta">Projects</span>
-										<h2 class="colorlib-heading animate-box">Projects</h2>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3>ICLR 2018 Reproducibility Challenge</h3>
-										<p>
-											My team participated in <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html" target="_blank">this challenge</a>, and aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features" target="_blank">here</a>.
-										</p>
-									</div>
-								</div>
-								<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-									<div class="services color-4">
-										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3>Front-end Collision Prevention System</h3>
-										<p>
-											My team created a system to be incorporated into dash cameras to automatically detect cars suddenly breaking/slowing down in front. For the detection of cars, we used the <a href="https://arxiv.org/abs/1512.02325" target="_blank">Single Shot MultiBox Detector</a> (SSD) with pre-trained weights on the VOC2007 dataset. For detecting break lights, we used a sequence of HSL thresholding, morphological closure, and blob detection. A combination of both detections are used to determine whether the cars in front are suddenly breaking/slowing down. The results of our system can be found <a href="https://youtu.be/kxjSe9UHx4Q" target="_blank">here</a> and <a href="https://youtu.be/7a4Xlpptc1A" target="_blank">here</a>. The color of the bounding box indicate the detection result. The final report can be found <a href="static/442_report.pdf" target="_blank">here</a>.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
-
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
-
-	</body>
+    <div id="footer">
+        <i>Website best viewed on a computer.</i>
+    </div>
+</body>
 </html>
-

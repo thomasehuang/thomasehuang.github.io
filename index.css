@@ -49,6 +49,9 @@ button {
 #about {
     margin-top: 30px;
 }
+#award_list {
+    padding-left: 15px;
+}
 .norm {
     margin-left: 15px;
     margin-right: 15px;
@@ -60,6 +63,7 @@ button {
     margin-bottom: 20px;
     padding: 20px;
     box-shadow: 0px 0px 5px #aaa;
+    background-color: FloralWhite;
 }
 .date {
     float: right;
@@ -69,3 +73,23 @@ button {
 .pressed {
     background-color: gray;
 }
+
+/*
+by default, some blocks are not shown
+*/
+#proj {
+    display: none;
+}
+#prof_exp {
+    display: none;
+}
+#xtra {
+    display: none;
+}
+#conf {
+    display: none;
+}
+#read {
+    display: none;
+}
+/**/
