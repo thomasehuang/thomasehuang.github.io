@@ -11,6 +11,7 @@ function dispButton(button) {
         exp_down = !exp_down
         pub_down = false
         tae_down = false
+        award_down = false
         proj_down = false
         misc_down = false
         if (!exp_down) {
@@ -26,6 +27,7 @@ function dispButton(button) {
         pub_down = !pub_down
         exp_down = false
         tae_down = false
+        award_down = false
         proj_down = false
         misc_down = false
         if (!pub_down) {
@@ -40,6 +42,7 @@ function dispButton(button) {
         tae_down = !tae_down
         exp_down = false
         pub_down = false
+        award_down = false
         proj_down = false
         misc_down = false
         if (!tae_down) {
@@ -71,6 +74,7 @@ function dispButton(button) {
         exp_down = false
         pub_down = false
         tae_down = false
+        award_down = false
         misc_down = false
         if (!proj_down) {
             showAll()
@@ -85,6 +89,7 @@ function dispButton(button) {
         exp_down = false
         pub_down = false
         tae_down = false
+        award_down = false
         proj_down = false
         if (!misc_down) {
             showAll()
@@ -124,6 +129,7 @@ function removeButton() {
     document.getElementById("exp_but").classList.remove("pressed")
     document.getElementById("pub_but").classList.remove("pressed")
     document.getElementById("tae_but").classList.remove("pressed")
+    document.getElementById("award_but").classList.remove("pressed")
     document.getElementById("proj_but").classList.remove("pressed")
     document.getElementById("misc_but").classList.remove("pressed")
 }

@@ -1,6 +1,11 @@
+html {
+    background: #fafafa;
+}
 body {
+    background: white;
+    box-shadow: 0 0 5px #ccc;
     font-family: Helvetica Neue, Arial, Verdana;
-    padding: 20px;
+    padding: 20px 50px;
     font-size: 16px;
     margin: auto;
     max-width: 800px;
@@ -10,16 +15,41 @@ heading {
     font-size: 18px;
 }
 button {
+    border-radius: 5px;
     font-family: Arial, Verdana, Helvetica;
     font-size: 18px;
     margin: 2px 2px 0px 2px;
     padding: 5px 10px 5px 10px;
-    background-color: lightgray;
+    background-color: none;
     outline: none;
     cursor: pointer;
 }
+button:hover {
+    background: FloralWhite;
+}
+#info {
+    display: inline-block;
+    vertical-align: top;
+}
+#info a {
+    margin: 0 5px;
+    line-height: 16px;
+}
+#info img {
+    vertical-align: text-top;
+}
+#links_list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#links_list li {
+    display: inline-block;
+    vertical-align: top;
+}
 #title {
-    margin-bottom: 5px;
+    margin: 25px 0;
+    margin-bottom: 15px;
 }
 #footer {
     margin-top: 50px;
@@ -42,10 +72,6 @@ button {
     margin: 5px;
     margin-right: 10px;
 }
-#info {
-    display: inline-block;
-    vertical-align: top;
-}
 #about {
     margin-top: 30px;
 }
@@ -58,12 +84,13 @@ button {
     margin-bottom: 15px;
 }
 .card {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0px 0px 5px #aaa;
-    background-color: FloralWhite;
+    background-color: none;
+    /*margin-top: 35px;*/
+    margin-bottom: 35px;
+    padding: 0 15px;
+}
+.card_body {
+    margin-left: 15px;
 }
 .date {
     float: right;
@@ -71,7 +98,7 @@ button {
     font-style: italic;
 }
 .pressed {
-    background-color: gray;
+    background-color: FloralWhite;
 }
 
 /*

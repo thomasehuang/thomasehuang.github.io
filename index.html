@@ -43,11 +43,17 @@
         </div>
         <div id="info">
             <h1>Thomas Huang</h1>
-            Email: thomaseh [at] umich [dot] edu <br>
-            [<a href="https://www.linkedin.com/in/thomaseh/" target="_blank">LinkedIn</a>]
-            [<a href="https://github.com/thomasehuang" target="_blank">GitHub</a>]
-            [<a href="static/resume.pdf" target="_blank">CV</a>]
-            [<a href="https://scholar.google.com/citations?user=7wuq-7AAAAAJ&hl=en" target="_blank">Google Scholar</a>]
+            <h3><i>University of Michigan</i></h3>
+            <strong>Email</strong>: thomaseh [at] umich [dot] edu <br><br>
+            <ul id="links_list">
+                <li><a href="https://www.linkedin.com/in/thomaseh/" target="_blank"><img height="16" width="16" src="static/icons/linkedin.svg" /></a></li>
+                <li><a href="https://github.com/thomasehuang" target="_blank"><img height="16" width="16" src="static/icons/github.svg" /></a></li>
+                <li><a href="https://scholar.google.com/citations?user=7wuq-7AAAAAJ&hl=en" target="_blank"><img height="16" width="16" src="static/icons/google.svg" /></a></li>
+                <!-- [<a href="https://www.linkedin.com/in/thomaseh/" target="_blank">LinkedIn</a>]
+                [<a href="https://github.com/thomasehuang" target="_blank">GitHub</a>]
+                [<a href="https://scholar.google.com/citations?user=7wuq-7AAAAAJ&hl=en" target="_blank">Google Scholar</a>] -->
+                <li><a href="static/resume.pdf" target="_blank">Curriculum Vitae</a></li>
+            </ul>
         </div>
     </div>
     <!-- <hr> -->
@@ -67,8 +73,8 @@
         <button id="pub_but" onclick="dispButton('pub');">Publications</button>
         <button id="exp_but" onclick="dispButton('exp');">Experience</button>
         <button id="tae_but" onclick="dispButton('tae');">Teaching & Education</button>
-        <button id="proj_but" onclick="dispButton('proj');">Projects</button>
         <button id="award_but" onclick="dispButton('award');">Awards</button>
+        <button id="proj_but" onclick="dispButton('proj');">Projects</button>
         <button id="misc_but" onclick="dispButton('misc');">Misc</button>
     </div>
 
@@ -86,7 +92,7 @@
                 [<a href="https://arxiv.org/abs/1808.07535" target="_blank">arxiv</a>] [<a href="https://github.com/xcyan/neurips18_hierchical_image_manipulation" target="_blank">code</a>]
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='res_exp'>
@@ -97,7 +103,7 @@
                 Research Assistant <span class="date">April, 2018 – current</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 I am researching the application of deep learning to generation tasks, including image and music generation. Work done under <a href="http://web.eecs.umich.edu/~honglak/" target="_blank">Professor Honglak Lee</a>. Work partially done under the <a href="https://sure.engin.umich.edu/" target="_blank">SURE program</a>.
             </div>
         </div>
@@ -107,11 +113,11 @@
                 Research Assistant <span class="date">Jan – April, 2018</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 I researched the use of deep learning models for 3D shape completion from a single depth view, which has important applications in robotics. Work done under <a href="http://web.eecs.umich.edu/~dmitryb/" target="_blank">Professor Dmitry Berenson</a> at the <a href="http://arm.eecs.umich.edu/" target="_blank">Autonomous Robotic Manipulation</a> (ARM) Lab.
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='teach'>
@@ -119,14 +125,14 @@
         <div class="card">
             <heading>EECS 445: Introduction to Machine Learning</heading> – University of Michigan
             <div>
-                Instructional Aide for Winter and Fall 2018 (2 semesters) <span class="date">Jan – Apr, 2018; Sep – Present</span>
+                Instructional Aide (2 semesters), Head Instructional Aide (1 semester) <span class="date">Jan, 2018 – Apr, 2019</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 I taught fundamental machine learning concepts, including linear classifiers, support vector machines, decision trees, bagging and boosting, neural networks, deep learning, clustering, collaborative filtering, and graphical models.
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='ed'>
@@ -134,16 +140,16 @@
         <div class="card">
             <heading>University of Michigan</heading> – Ann Arbor, Michigan
             <div>
-                Computer Science, Bachelor of Engineering <span class="date">Sep, 2015 – Present</span>
+                Computer Science, Bachelor of Engineering <span class="date">Sep, 2015 – Apr, 2019</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 Cumulative GPA: 3.99, Major GPA: 4.0 <br>
                 Relevant coursework: Machine Learning, Reinforcement Learning, Computer Vision, Artificial Intelligence, Natural Language Processing, Data Mining, Algorithmic Robotics, Web Systems, Operating Systems.<br><br>
                 Honors and Awards: <a href="https://studentawards.engin.umich.edu/deanslist/" target="_blank">Dean's Honor List</a> (Fall '15, Winter & Fall '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">University Honors</a> (Winter '16, Fall '17, Winter '18), <a href="http://honors.umich.edu/awards.php" target="_blank">James B. Angell Scholar</a> ('18)
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='award'>
@@ -155,7 +161,7 @@
                 </ul>
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <!-- Below are not shown by default -->
@@ -168,7 +174,7 @@
                 Final Project for EECS 498: Reinforcement Learning at the University of Michigan <span class="date">Sep – Dec, 2017</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 For <a href="https://www.cs.mcgill.ca/~jpineau/ICLR2018-ReproducibilityChallenge.html" target="_blank">this challenge</a>, we aimed to reproduce the results from the paper <i>Curiosity-driven Exploration by Bootstrapping Features</i>. Our implementation and report can be found <a href="https://github.com/thomasehuang/Reproducing-Curiosity-Driven-Exploration-By-Bootstrapping-Features" target="_blank">here</a>.
             </div>
         </div>
@@ -178,11 +184,11 @@
                 Final Project for EECS 442: Computer Vision at the University of Michigan <span class="date">Sep – Dec, 2017</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 My team created a system to be incorporated into dash cameras to automatically detect cars suddenly breaking/slowing down in front. For the detection of cars, we used the <a href="https://arxiv.org/abs/1512.02325" target="_blank">Single Shot MultiBox Detector</a> (SSD) with pre-trained weights on the VOC2007 dataset. For detecting break lights, we used a sequence of HSL thresholding, morphological closure, and blob detection. A combination of both detections are used to determine whether the cars in front are suddenly breaking/slowing down. The results of our system can be found <a href="https://youtu.be/kxjSe9UHx4Q" target="_blank">here</a> and <a href="https://youtu.be/7a4Xlpptc1A" target="_blank">here</a>. The color of the bounding box indicate the detection result. The final report can be found <a href="static/442_report.pdf" target="_blank">here</a>.
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='prof_exp'>
@@ -193,11 +199,11 @@
                 Frontier Scale Software Engineering Intern <span class="date">May – August, 2017</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 I worked with a team to pioneer the integration of a third-party software with Salesforce’s Platform using Python and Javascript. I presented the product to C-level executives of a corporate client.
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='xtra'>
@@ -205,20 +211,20 @@
         <div class="card">
             <heading>UM::Autonomy</heading> – University of Michigan
             <div>
-                Lead for the AI subteam (2016 – 2018) <span class="date">Sep, 2015 – Current</span>
+                Lead for the AI subteam (2016 – 2018) <span class="date">Sep, 2015 – Sep, 2018</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 Our team designs and builds an autonomous, robotic boat every year to compete in the <a href="https://www.auvsifoundation.org/competition/roboboat">International RoboBoat Competition</a>, which is composed of several challenges. Our team also composes a research journal paper/technical design report each year, which can be found here (<a href="static/uma_2016.pdf" target="_blank">2016</a>, <a href="static/uma_2017.pdf" target="_blank">2017</a>). For two years, I was the lead of the AI subteam, which is in charge of the software and algorithms used by the boat. I supervised various tasks, such as data collection, object detection, and control systems.
             </div>
         </div>
         <div class="card">
             <heading>Eta Kappa Nu, EECS Honor Society</heading> – University of Michigan
             <div>
-                Member <span class="date">Sep, 2016 – Current</span>
+                Member <span class="date">Sep, 2016 – Apr, 2019</span>
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='conf'>
@@ -229,11 +235,11 @@
                 Poster Session<span class="date">Dec 3, 2018 – Dec 8, 2018</span>
             </div>
             <br>
-            <div>
+            <div class="card_body">
                 I presented our paper, <i>Learning Hierarchical Semantic Image Manipulation through Structured Representations</i>, at the poster session (<a href="neurips2018.html">pictures</a>).
             </div>
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
     <div id='read'>
@@ -241,10 +247,10 @@
         <div class="norm">
             I am keeping a list of papers that I read for research/projects, which can be found <a href="https://github.com/thomasehuang/ML-Paper-Notes">here</a>.
         </div>
-        <!-- <hr> -->
+        <hr>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <div id="footer">
         <i>Website best viewed on a computer.</i>
