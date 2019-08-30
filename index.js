@@ -128,6 +128,8 @@ function hideAll() {
     document.getElementById("xtra").style.display = "none"
     document.getElementById("conf").style.display = "none"
     document.getElementById("read").style.display = "none"
+    document.getElementById("tab_details").style.display = "none"
+    document.getElementById("pub_title").style.marginTop = "25px"
 }
 
 function removeButton() {
