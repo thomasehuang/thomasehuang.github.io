@@ -110,6 +110,11 @@ function showAll() {
     document.getElementById("teach").style.display = "block"
     document.getElementById("ed").style.display = "block"
     document.getElementById("award").style.display = "block"
+
+    var cards = document.getElementsByClassName("card_main")
+    for (var i=0; i<cards.length; i++) {
+        cards[i].style.display = "none"
+    }
 }
 
 function hideAll() {
@@ -132,4 +137,9 @@ function removeButton() {
     document.getElementById("award_but").classList.remove("pressed")
     document.getElementById("proj_but").classList.remove("pressed")
     document.getElementById("misc_but").classList.remove("pressed")
+
+    var cards = document.getElementsByClassName("card_main")
+    for (var i=0; i<cards.length; i++) {
+        cards[i].style.display = "block"
+    }
 }

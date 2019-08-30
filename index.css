@@ -86,11 +86,14 @@ button:hover {
 .card {
     background-color: none;
     /*margin-top: 35px;*/
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     padding: 0 15px;
 }
 .card_body {
     margin-left: 15px;
+}
+.card_main {
+    display: none;
 }
 .date {
     float: right;
