@@ -105,6 +105,25 @@ window.onload = function() {
         }
     }
 
+    document.getElementById("pub_but").onclick = function() {
+        dispButton('pub');
+    }
+    document.getElementById("exp_but").onclick = function() {
+        dispButton('exp');
+    }
+    document.getElementById("tae_but").onclick = function() {
+        dispButton('tae');
+    }
+    document.getElementById("award_but").onclick = function() {
+        dispButton('award');
+    }
+    document.getElementById("proj_but").onclick = function() {
+        dispButton('proj');
+    }
+    document.getElementById("misc_but").onclick = function() {
+        dispButton('misc');
+    }
+
     function showAll() {
         document.getElementById("res_exp").style.display = "block"
         document.getElementById("pub").style.display = "block"
