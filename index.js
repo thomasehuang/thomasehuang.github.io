@@ -98,7 +98,7 @@ window.onload = function() {
             } else {
                 document.getElementById("xtra").style.display = "block"
                 document.getElementById("conf").style.display = "block"
-                document.getElementById("read").style.display = "block"
+                // document.getElementById("read").style.display = "block"
                 removeButton()
                 document.getElementById("misc_but").classList.add("pressed")
             }
@@ -147,7 +147,7 @@ window.onload = function() {
         document.getElementById("award").style.display = "none"
         document.getElementById("xtra").style.display = "none"
         document.getElementById("conf").style.display = "none"
-        document.getElementById("read").style.display = "none"
+        // document.getElementById("read").style.display = "none"
         document.getElementById("tab_details").style.display = "none"
         document.getElementById("pub_title").style.marginTop = "25px"
     }
