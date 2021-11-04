@@ -117,19 +117,16 @@ button:hover {
 /*
 by default, some blocks are not shown
 */
+#award {
+    display: none;
+}
+#teach {
+    display: none;
+}
 #proj {
     display: none;
 }
 #prof_exp {
-    display: none;
-}
-#xtra {
-    display: none;
-}
-#conf {
-    display: none;
-}
-#read {
     display: none;
 }
 /**/

@@ -89,9 +89,9 @@ window.onload = function() {
     function showAll() {
         document.getElementById("res_exp").style.display = "block"
         document.getElementById("pub").style.display = "block"
-        document.getElementById("teach").style.display = "block"
+        // document.getElementById("teach").style.display = "block"
         document.getElementById("ed").style.display = "block"
-        document.getElementById("award").style.display = "block"
+        // document.getElementById("award").style.display = "block"
 
         var cards = document.getElementsByClassName("hide_on_all")
         for (var i=0; i<cards.length; i++) {
