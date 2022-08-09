@@ -21,6 +21,7 @@ window.onload = function() {
             } else {
                 document.getElementById("res_exp").style.display = "block"
                 document.getElementById("prof_exp").style.display = "block"
+                document.getElementById("services").style.display = "block"
                 removeButton()
                 document.getElementById("exp_but").classList.add("pressed")
             }
@@ -88,6 +89,7 @@ window.onload = function() {
 
     function showAll() {
         document.getElementById("res_exp").style.display = "block"
+        document.getElementById("services").style.display = "block"
         document.getElementById("pub").style.display = "block"
         // document.getElementById("teach").style.display = "block"
         document.getElementById("ed").style.display = "block"
@@ -102,6 +104,7 @@ window.onload = function() {
     function hideAll() {
         document.getElementById("res_exp").style.display = "none"
         document.getElementById("prof_exp").style.display = "none"
+        document.getElementById("services").style.display = "none"
         document.getElementById("pub").style.display = "none"
         document.getElementById("teach").style.display = "none"
         document.getElementById("ed").style.display = "none"
